@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odin's Famous Recipes</title>
+  <meta charset="UTF-8">
+  <title>My Status</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    <!--I have linked the recipe of Lasagna in this html to my other html that contains the recipe below-->
-    
-    <h1>Odin Recipes</h1>
-  
-    <ul>
-        <li>
-            <a href="recipes/lasagna.html" target="_blank" rel="noopener noreferrer">Lasagna Recipe Here</a>
-        </li>
-        <li>
-            <a href="recipes/pizza.html" target="_blank" rel="noopener noreferrer">Pizza Recipe Here</a>
-        </li>
-        <li>
-            <a href="recipes/hamburger.html" target="_blank" rel="noopener noreferrer">Hamburger Recipe Here</a>
-        </li>
-    </ul>
-   
-   
+  <div class="container">
+    <div class="profile-card">
+      <img class="avatar" src="your-profile.jpg" alt="Profile Picture">
+      <div class="user-info">
+        <h2>@yourname</h2>
+        <span class="status online">● Online</span>
+      </div>
 
+      <div class="activity">
+        <h3>🎬 Watching</h3>
+        <p>Demon Slayer - S3 Ep9</p>
+      </div>
+
+      <div class="activity">
+        <h3>🎮 Playing</h3>
+        <p>Minecraft (Java)</p>
+      </div>
+
+      <div class="activity">
+        <h3>📱 On</h3>
+        <p>Instagram, Snapchat</p>
+      </div>
+
+      <div class="activity">
+        <h3>💤 Status</h3>
+        <p>Just vibing... might be asleep 😴</p>
+      </div>
+    </div>
+    <p class="footer">Last updated: <span id="timestamp">May 28, 2025</span></p>
+  </div>
 </body>
 </html>
