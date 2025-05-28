@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,33 +10,35 @@
 <body>
   <div class="container">
     <div class="profile-card">
-      <img class="avatar" src="your-profile.jpg" alt="Profile Picture">
+      <img class="avatar" src="profile.jpg" alt="Profile Picture">
       <div class="user-info">
-        <h2>@rsshnnn</h2>
-        <span class="status online">● Online</span>
+        <h2>@yourname</h2>
+        <span class="status" id="status-dot">● Loading...</span>
       </div>
 
       <div class="activity">
         <h3>🎬 Watching</h3>
-        <p>Demon Slayer - S3 Ep9</p>
+        <p id="watching">Loading...</p>
       </div>
 
       <div class="activity">
         <h3>🎮 Playing</h3>
-        <p>Minecraft (Java)</p>
+        <p id="playing">Loading...</p>
       </div>
 
       <div class="activity">
         <h3>📱 On</h3>
-        <p>Instagram, Snapchat</p>
+        <p id="social">Loading...</p>
       </div>
 
       <div class="activity">
         <h3>💤 Status</h3>
-        <p>Just vibing... might be asleep 😴</p>
+        <p id="customStatus">Loading...</p>
       </div>
     </div>
-    <p class="footer">Last updated: <span id="timestamp">May 28, 2025</span></p>
+    <p class="footer">Last updated: <span id="timestamp">Loading...</span></p>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
