@@ -16,16 +16,14 @@
       padding: 40px 20px;
     }
 
-    /* Grid layout for 3 columns */
     .photo-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       max-width: 1200px;
-      margin: 0 auto;
+      margin: 0 auto 40px auto;
     }
 
-    /* Rounded corner container for each photo */
     .photo-container {
       background-color: #fff;
       border-radius: 12px;
@@ -33,17 +31,15 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-    /* Ensure embed respects rounded corners */
     .photo-container blockquote.instagram-media {
       border-radius: 12px;
       overflow: hidden;
     }
 
-    /* Google Photos link */
     .google-photos-link {
       display: block;
       text-align: center;
-      margin-top: 30px;
+      margin-top: 10px;
       font-weight: 600;
       color: #1a73e8;
       text-decoration: none;
@@ -57,9 +53,8 @@
 </head>
 <body>
   <main>
-    <!-- Photo Grid -->
+    <!-- First Row -->
     <div class="photo-grid">
-      <!-- Repeat this container for each Instagram embed -->
       <div class="photo-container">
         <blockquote 
           class="instagram-media"
@@ -86,13 +81,42 @@
           style="background:#FFF; border:0; margin:0 auto; max-width:400px; min-width:326px; padding:0; width:100%; border-radius:12px;">
         </blockquote>
       </div>
-      <!-- Add more .photo-container blocks as needed -->
+    </div>
+
+    <!-- Second Row -->
+    <div class="photo-grid">
+      <div class="photo-container">
+        <blockquote 
+          class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/p/your_post_4/"
+          data-instgrm-version="14"
+          style="background:#FFF; border:0; margin:0 auto; max-width:400px; min-width:326px; padding:0; width:100%; border-radius:12px;">
+        </blockquote>
+      </div>
+
+      <div class="photo-container">
+        <blockquote 
+          class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/p/your_post_5/"
+          data-instgrm-version="14"
+          style="background:#FFF; border:0; margin:0 auto; max-width:400px; min-width:326px; padding:0; width:100%; border-radius:12px;">
+        </blockquote>
+      </div>
+
+      <div class="photo-container">
+        <blockquote 
+          class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/p/your_post_6/"
+          data-instgrm-version="14"
+          style="background:#FFF; border:0; margin:0 auto; max-width:400px; min-width:326px; padding:0; width:100%; border-radius:12px;">
+        </blockquote>
+      </div>
     </div>
 
     <!-- Instagram embed script -->
     <script async src="//www.instagram.com/embed.js"></script>
 
-    <!-- Google Photos link -->
+    <!-- Google Photos Link -->
     <a 
       href="https://photos.google.com/your_album_link"
       target="_blank"
