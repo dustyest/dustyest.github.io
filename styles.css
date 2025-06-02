@@ -106,3 +106,13 @@ body {
 .nav-button:hover {
   background-color: #555;
 }
+
+.instagram-wrapper {
+  background-color: var(--your-background-color, #333); /* replace --your-background-color with your CSS variable or just set the color */
+  /* Example if you have a CSS variable for your page background */
+  /* background-color: var(--page-background-color); */
+
+  /* or just use your site's main background color */
+  /* background-color: #f0f0f0; */
+}
+
