@@ -6,29 +6,46 @@
   <title>Photography</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Rounded corner rectangle container */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color, #f5f5f5);
+    }
+
+    main {
+      padding: 40px 20px;
+    }
+
+    /* Grid layout for 3 columns */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Rounded corner container for each photo */
     .photo-container {
-      background-color: #ffffff; /* or any background color */
+      background-color: #fff;
       border-radius: 12px;
-      padding: 20px;
-      max-width: 400px; /* adjust as needed */
-      margin: 20px auto;
+      padding: 16px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-    /* Instagram embed inside container */
+    /* Ensure embed respects rounded corners */
     .photo-container blockquote.instagram-media {
-      border-radius: 12px; /* match container */
-      overflow: hidden;    /* clip corners inside */
+      border-radius: 12px;
+      overflow: hidden;
     }
 
-    /* Google Photos link styling */
+    /* Google Photos link */
     .google-photos-link {
       display: block;
       text-align: center;
-      margin-top: 12px;
+      margin-top: 30px;
       font-weight: 600;
-      color: #1a73e8; /* Google blue */
+      color: #1a73e8;
       text-decoration: none;
       font-size: 16px;
     }
@@ -40,29 +57,48 @@
 </head>
 <body>
   <main>
-    <section class="photo-container">
-      <!-- Your Instagram embed blockquote here -->
-      <blockquote
-        class="instagram-media"
-        data-instgrm-permalink="https://www.instagram.com/p/DKTXatNgBwU/"
-        data-instgrm-version="14"
-        style=" background:#0f134f; border:0; margin:0 auto; max-width:400px; min-width:326px; padding:0; width:100%; border-radius:12px; overflow:hidden;"
-      >
-        <div style="padding:16px;">
-          <!-- Instagram embed contents -->
-        </div>
-      </blockquote>
-      <script async src="//www.instagram.com/embed.js"></script>
-    </section>
+    <!-- Photo Grid -->
+    <div class="photo-grid">
+      <!-- Repeat this container for each Instagram embed -->
+      <div class="photo-container">
+        <blockquote 
+          class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/p/your_post_1/"
+          data-instgrm-version="14"
+          style="background:#FFF; border:0; margin:0 auto; max-width:400px; min-width:326px; padding:0; width:100%; border-radius:12px;">
+        </blockquote>
+      </div>
 
-    <!-- Google Photos link below the container -->
-    <a
+      <div class="photo-container">
+        <blockquote 
+          class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/p/your_post_2/"
+          data-instgrm-version="14"
+          style="background:#FFF; border:0; margin:0 auto; max-width:400px; min-width:326px; padding:0; width:100%; border-radius:12px;">
+        </blockquote>
+      </div>
+
+      <div class="photo-container">
+        <blockquote 
+          class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/p/your_post_3/"
+          data-instgrm-version="14"
+          style="background:#FFF; border:0; margin:0 auto; max-width:400px; min-width:326px; padding:0; width:100%; border-radius:12px;">
+        </blockquote>
+      </div>
+      <!-- Add more .photo-container blocks as needed -->
+    </div>
+
+    <!-- Instagram embed script -->
+    <script async src="//www.instagram.com/embed.js"></script>
+
+    <!-- Google Photos link -->
+    <a 
       href="https://photos.google.com/your_album_link"
       target="_blank"
       rel="noopener noreferrer"
-      class="google-photos-link"
-    >
-      View the full photo album on Google Photos.
+      class="google-photos-link">
+      View my full photography album on Google Photos
     </a>
   </main>
 </body>
