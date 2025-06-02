@@ -1,113 +1,155 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Photography | rshn</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body {
-      margin: 0;
-      background: #360033;
-      color: white;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-      padding: 20px;
-    }
-    .container {
-      max-width: 360px;
-      width: 100%;
-      text-align: center;
-    }
-    h1 {
-      font-weight: 600;
-      margin-bottom: 15px;
-      font-size: 1.8rem;
-    }
-    .post-box {
-      background: #4b006e;
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 0 10px rgba(75, 0, 110, 0.8);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-    }
-    /* Instagram embed container */
-    .instagram-media {
-      margin: 0 auto !important;
-      max-width: 320px !important;
-      min-width: 320px !important;
-      width: 320px !important;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .google-photos-link {
-      background: #30004b;
-      border-radius: 6px;
-      padding: 8px 12px;
-      font-size: 0.9rem;
-      width: 100%;
-      box-sizing: border-box;
-      font-weight: 500;
-      transition: background-color 0.2s ease;
-    }
-    .google-photos-link a {
-      color: #ff66cc;
-      text-decoration: none;
-    }
-    .google-photos-link:hover {
-      background: #54007d;
-    }
-    .nav-button {
-      margin-top: 20px;
-      display: inline-block;
-      padding: 8px 14px;
-      background: #7f00ff;
-      color: white;
-      border-radius: 6px;
-      font-weight: 600;
-      text-decoration: none;
-      user-select: none;
-      transition: background-color 0.2s ease;
-    }
-    .nav-button:hover {
-      background: #9a33ff;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>📸 Photography</h1>
+/* Body and general layout */
+body {
+  background-color: #2c2f33; /* main page background */
+  color: #f5f6f8;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
 
-    <div class="post-box">
-      <!-- Instagram embed -->
-      <blockquote 
-        class="instagram-media" 
-        data-instgrm-captioned 
-        data-instgrm-permalink="https://www.instagram.com/p/DKTXatNgBwU/?utm_source=ig_embed&amp;utm_campaign=loading" 
-        data-instgrm-version="14" 
-        style="background:#fff; border:0; margin:0 auto; max-width:320px; min-width:320px; width:320px; border-radius:10px; overflow:hidden;">
-        <div style="padding:16px;">
-          <a href="https://www.instagram.com/p/DKTXatNgBwU/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0; text-align:center; text-decoration:none; width:100%;" target="_blank" rel="noopener noreferrer">
-            View this post on Instagram
-          </a>
-        </div>
-      </blockquote>
-      <script async src="//www.instagram.com/embed.js"></script>
+/* Container for cards */
+.container {
+  max-width: 400px;
+  padding: 20px;
+}
 
-      <!-- Google Photos link -->
-      <div class="google-photos-link">
-        <a href="https://photos.app.goo.gl/KmGmwzn1vddf8B8RA" target="_blank" rel="noopener noreferrer">
-          View this photo on Google Photos →
-        </a>
-      </div>
-    </div>
+/* Profile card styling */
+.profile-card {
+  background: #23272a; /* slightly darker for contrast */
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(88, 101, 242, 0.2);
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+  border: 1px solid #2c2f33; /* subtle border for separation */
+}
 
-    <a href="index.html" class="nav-button">← Back Home</a>
-  </div>
-</body>
-</html>
+.profile-card:hover {
+  box-shadow: 0 0 25px rgba(88, 101, 242, 0.4);
+}
+
+/* Avatar image */
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid #5865f2;
+}
+
+/* User info text */
+.user-info h2 {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Status text */
+.status {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.status.online {
+  color: #43b581;
+}
+
+.status.offline {
+  color: #747f8d;
+}
+
+/* Activity box */
+.activity {
+  background-color: #2c2f33;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.activity h3 {
+  margin: 0 0 5px;
+  color: #7289da;
+  font-size: 16px;
+}
+
+.activity p {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* Footer text */
+.footer {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #999;
+}
+
+/* Center utility */
+.center {
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* Button group layout */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Navigation buttons */
+.nav-button {
+  background-color: #333;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: #555;
+}
+
+/* ----------- Photography card styles ----------- */
+
+.photography-card {
+  background: #23272a; /* same as profile card for consistency */
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(88, 101, 242, 0.2);
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+  border: 1px solid #2c2f33;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.photography-card:hover {
+  box-shadow: 0 0 25px rgba(88, 101, 242, 0.4);
+}
+
+.photography-card img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #5865f2;
+}
+
+.photography-card h3 {
+  margin: 0 0 10px;
+  color: #7289da;
+}
+
+.photography-card p {
+  font-size: 14px;
+  color: #ccc;
+  margin: 0;
+}
