@@ -108,7 +108,13 @@ body {
 }
 
 .instagram-wrapper {
-  background-color: #0f134f; /* or your preferred background color */
+  background-color: #0f134f; /* change to your desired background */
+  padding: 10px;             /* add some spacing around the embed */
+  max-width: 320px;          /* optional: control width */
+  margin: 0 auto;            /* center it */
+  border-radius: 8px;        /* optional: rounded corners */
+  box-shadow: 0 0 5px rgba(0,0,0,0.1); /* optional subtle shadow */
 }
+
 
 
