@@ -3,54 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <title>Photography | rshn</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #fff;
       margin: 0;
-      padding: 20px;
+      background: #360033;
+      color: white;
+      font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 20px;
     }
     .container {
-      max-width: 600px;
+      max-width: 360px;
       width: 100%;
       text-align: center;
     }
     h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
     }
     .post-box {
-      border: 2px solid #ddd;
-      border-radius: 8px;
+      background: #4b006e;
+      border-radius: 10px;
       padding: 15px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(75, 0, 110, 0.8);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    /* Instagram embed container */
+    .instagram-media {
+      margin: 0 auto !important;
+      max-width: 320px !important;
+      min-width: 320px !important;
+      width: 320px !important;
+      border-radius: 10px;
+      overflow: hidden;
     }
     .google-photos-link {
-      margin-top: 10px;
-      background: #f7f7f7;
-      padding: 10px;
+      background: #30004b;
       border-radius: 6px;
-      font-size: 1rem;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      width: 100%;
+      box-sizing: border-box;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
     }
     .google-photos-link a {
-      color: #0077cc;
+      color: #ff66cc;
       text-decoration: none;
-      font-weight: bold;
+    }
+    .google-photos-link:hover {
+      background: #54007d;
     }
     .nav-button {
-      display: inline-block;
       margin-top: 20px;
-      padding: 10px 15px;
-      background: #0077cc;
+      display: inline-block;
+      padding: 8px 14px;
+      background: #7f00ff;
       color: white;
-      border-radius: 4px;
-      text-decoration: none;
+      border-radius: 6px;
       font-weight: 600;
+      text-decoration: none;
+      user-select: none;
+      transition: background-color 0.2s ease;
+    }
+    .nav-button:hover {
+      background: #9a33ff;
     }
   </style>
 </head>
@@ -60,7 +85,12 @@
 
     <div class="post-box">
       <!-- Instagram embed -->
-      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DKTXatNgBwU/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px auto; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+      <blockquote 
+        class="instagram-media" 
+        data-instgrm-captioned 
+        data-instgrm-permalink="https://www.instagram.com/p/DKTXatNgBwU/?utm_source=ig_embed&amp;utm_campaign=loading" 
+        data-instgrm-version="14" 
+        style="background:#fff; border:0; margin:0 auto; max-width:320px; min-width:320px; width:320px; border-radius:10px; overflow:hidden;">
         <div style="padding:16px;">
           <a href="https://www.instagram.com/p/DKTXatNgBwU/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0; text-align:center; text-decoration:none; width:100%;" target="_blank" rel="noopener noreferrer">
             View this post on Instagram
@@ -69,7 +99,7 @@
       </blockquote>
       <script async src="//www.instagram.com/embed.js"></script>
 
-      <!-- Google Photos link below -->
+      <!-- Google Photos link -->
       <div class="google-photos-link">
         <a href="https://photos.app.goo.gl/KmGmwzn1vddf8B8RA" target="_blank" rel="noopener noreferrer">
           View this photo on Google Photos →
