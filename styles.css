@@ -116,5 +116,12 @@ body {
   box-shadow: 0 0 5px rgba(0,0,0,0.1); /* optional subtle shadow */
 }
 
+.instagram-wrapper blockquote.instagram-media,
+.instagram-wrapper blockquote.instagram-media > div,
+.instagram-wrapper blockquote.instagram-media a {
+  background: transparent !important;
+}
+
+
 
 
