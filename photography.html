@@ -14,16 +14,15 @@
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: var(--background-color);
-      color: #fff;
-    }
-
-    h1 {
-      text-align: center;
-      margin-top: 1rem;
     }
 
     main {
       padding: 40px 20px;
+    }
+
+    h1, p {
+      text-align: center;
+      color: #fff;
     }
 
     .photo-grid {
@@ -31,26 +30,28 @@
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       max-width: 1200px;
-      margin: 0 auto 40px auto;
+      margin: 0 auto 40px;
     }
 
     .photo-container {
       background-color: #fff;
       border-radius: 12px;
-      padding: 16px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
     }
 
     .instagram-media {
-      max-width: 100% !important;
       width: 100% !important;
-      border-radius: 12px !important;
+      min-width: 0 !important;
+      max-width: 100% !important;
+      margin: 0 auto !important;
     }
 
     .google-photos-link {
       display: block;
       text-align: center;
-      margin: 40px auto 10px;
+      margin: 40px auto;
       font-weight: 600;
       color: #1a73e8;
       text-decoration: none;
@@ -68,44 +69,27 @@
       align-items: center;
       min-height: 100vh;
       padding-top: 2rem;
-      text-align: center;
-    }
-
-    .nav-button {
-      margin-top: 1rem;
-      text-decoration: none;
-      background-color: #7289da;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    .nav-button:hover {
-      background-color: #5b6eae;
     }
 
     @media (max-width: 600px) {
-      main {
-        padding: 20px 10px;
+      .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0 10px;
       }
 
       .google-photos-link {
         font-size: 14px;
-        margin: 20px auto 10px;
+        margin: 20px 0;
       }
 
       h1 {
-        font-size: 1.5rem;
-      }
-
-      p {
-        font-size: 1rem;
+        font-size: 1.6rem;
         padding: 0 10px;
       }
 
-      .nav-button {
-        padding: 8px 16px;
+      p {
+        padding: 0 10px;
       }
     }
   </style>
@@ -114,11 +98,11 @@
   <div class="container centerr">
     <h1>📸 Photography</h1>
     <p>This is the photography page. Description coming soon!</p>
-    <a href="index.html" class="nav-button">← Back Home</a>
+    <a href="index.html" class="google-photos-link">← Back Home</a>
   </div>
 
   <main>
-    <!-- First Row -->
+    <!-- Row 1 -->
     <div class="photo-grid">
       <div class="photo-container">
         <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DKTZOPyAnY3/" data-instgrm-version="14"></blockquote>
@@ -135,7 +119,7 @@
       ⬆️ View the full photography album on Google Photos ⬆️
     </a>
 
-    <!-- Second Row -->
+    <!-- Row 2 -->
     <div class="photo-grid">
       <div class="photo-container">
         <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DKDnEZXP0sy/" data-instgrm-version="14"></blockquote>
@@ -148,24 +132,15 @@
       </div>
     </div>
 
-    <!-- More Links -->
+    <!-- Misc Links -->
     <div class="photo-grid">
-      <a href="https://photos.app.goo.gl/aMUy22HEUuNrvJqL6" target="_blank" rel="noopener noreferrer" class="google-photos-link">
-        View the full photography album on Google Photos
-      </a>
-
-      <a href="https://dustyest.github.io/photography.html" target="_blank" rel="noopener noreferrer" class="google-photos-link">
-        No Link for this Album ;(
-      </a>
-
-      <a href="https://dustyest.github.io/photography.html" target="_blank" rel="noopener noreferrer" class="google-photos-link">
-        No Link for this Album ;(
-      </a>
+      <a href="https://photos.app.goo.gl/aMUy22HEUuNrvJqL6" target="_blank" rel="noopener noreferrer" class="google-photos-link">View the full photography album on Google Photos</a>
+      <a href="https://dustyest.github.io/photography.html" target="_blank" rel="noopener noreferrer" class="google-photos-link">No Link for this Album ;(</a>
+      <a href="https://dustyest.github.io/photography.html" target="_blank" rel="noopener noreferrer" class="google-photos-link">No Link for this Album ;(</a>
     </div>
 
-    <a href="https://dustyest.github.io/photography.html" target="_blank" rel="noopener noreferrer" class="google-photos-link">
-      Enter Footer Note HERE!
-    </a>
+    <!-- Footer Note -->
+    <a href="https://dustyest.github.io/photography.html" target="_blank" rel="noopener noreferrer" class="google-photos-link">Enter Footer Note HERE!</a>
   </main>
 
   <!-- Instagram embed script -->
