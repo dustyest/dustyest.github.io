@@ -6,10 +6,20 @@
   <title>Photography</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
+    :root {
+      --background-color: #2c2f33;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: var(--background-color, #2c2f33);
+      background-color: var(--background-color);
+      color: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 1rem;
     }
 
     main {
@@ -31,15 +41,16 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-    .photo-container blockquote.instagram-media {
-      border-radius: 12px;
-      overflow: hidden;
+    .instagram-media {
+      max-width: 100% !important;
+      width: 100% !important;
+      border-radius: 12px !important;
     }
 
     .google-photos-link {
       display: block;
       text-align: center;
-      margin-top: 10px;
+      margin: 40px auto 10px;
       font-weight: 600;
       color: #1a73e8;
       text-decoration: none;
@@ -53,135 +64,111 @@
     .container.centerr {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start; /* Align content to the top */
-      align-items: center;         /* Center horizontally */
-      min-height: 100vh;           /* Full screen height */
-      padding-top: 2rem;           /* Optional: adds spacing from the top */
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 100vh;
+      padding-top: 2rem;
+      text-align: center;
     }
 
-    
+    .nav-button {
+      margin-top: 1rem;
+      text-decoration: none;
+      background-color: #7289da;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .nav-button:hover {
+      background-color: #5b6eae;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 20px 10px;
+      }
+
+      .google-photos-link {
+        font-size: 14px;
+        margin: 20px auto 10px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        padding: 0 10px;
+      }
+
+      .nav-button {
+        padding: 8px 16px;
+      }
+    }
   </style>
 </head>
 <body>
-  <body>
   <div class="container centerr">
     <h1>📸 Photography</h1>
     <p>This is the photography page. Description coming soon!</p>
     <a href="index.html" class="nav-button">← Back Home</a>
   </div>
-  </body>
-  
+
   <main>
     <!-- First Row -->
     <div class="photo-grid">
       <div class="photo-container">
-        <blockquote 
-          class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/p/DKTZOPyAnY3/"
-          data-instgrm-version="14"
-          style="background:#FFF; border:0; margin:0 auto; max-width:350px; min-width:326px; padding:0; width:100%; border-radius:12px;">
-        </blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DKTZOPyAnY3/" data-instgrm-version="14"></blockquote>
       </div>
-
       <div class="photo-container">
-        <blockquote 
-          class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/p/DKTYsGOgSPx/"
-          data-instgrm-version="14"
-          style="background:#FFF; border:0; margin:0 auto; max-width:400px; min-width:326px; padding:0; width:100%; border-radius:12px;">
-        </blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DKTYsGOgSPx/" data-instgrm-version="14"></blockquote>
       </div>
-
       <div class="photo-container">
-        <blockquote 
-          class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/p/DKTXatNgBwU/"
-          data-instgrm-version="14"
-          style="background:#FFF; border:0; margin:0 auto; max-width:400px; min-width:326px; padding:0; width:100%; border-radius:12px;">
-        </blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DKTXatNgBwU/" data-instgrm-version="14"></blockquote>
       </div>
     </div>
 
-    <a
-      href="https://photos.app.goo.gl/KmGmwzn1vddf8B8RA"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="google-photos-link"
-        style="display: block; text-align: center; margin: 40px auto 50px;">
+    <a href="https://photos.app.goo.gl/KmGmwzn1vddf8B8RA" target="_blank" rel="noopener noreferrer" class="google-photos-link">
       ⬆️ View the full photography album on Google Photos ⬆️
     </a>
-
 
     <!-- Second Row -->
     <div class="photo-grid">
       <div class="photo-container">
-        <blockquote 
-          class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/p/DKDnEZXP0sy/"
-          data-instgrm-version="14"
-          style="background:#FFF; border:0; margin:0 auto; max-width:400px; min-width:326px; padding:0; width:100%; border-radius:12px;">
-        </blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DKDnEZXP0sy/" data-instgrm-version="14"></blockquote>
       </div>
-
       <div class="photo-container">
-        <blockquote 
-          class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/p/DG1blrdvht_/"
-          data-instgrm-version="14"
-          style="background:#FFF; border:0; margin:0 auto; max-width:400px; min-width:326px; padding:0; width:100%; border-radius:12px;">
-        </blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DG1blrdvht_/" data-instgrm-version="14"></blockquote>
       </div>
-
       <div class="photo-container">
-        <blockquote 
-          class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/p/DCnXpvTOhcd/"
-          data-instgrm-version="14"
-          style="background:#FFF; border:0; margin:0 auto; max-width:400px; min-width:326px; padding:0; width:100%; border-radius:12px;">
-        </blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCnXpvTOhcd/" data-instgrm-version="14"></blockquote>
       </div>
     </div>
 
+    <!-- More Links -->
     <div class="photo-grid">
-        <a
-          href="https://photos.app.goo.gl/aMUy22HEUuNrvJqL6"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="google-photos-link"
-          style="display: block; text-align: center; margin: 0px auto 10px;">
-          View the full photography album on Google Photos
-        </a>
+      <a href="https://photos.app.goo.gl/aMUy22HEUuNrvJqL6" target="_blank" rel="noopener noreferrer" class="google-photos-link">
+        View the full photography album on Google Photos
+      </a>
 
-        <a
-          href="https://dustyest.github.io/photography.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="google-photos-link"
-          style="display: block; text-align: center; margin: 0px auto 10px;">
-          No Link for this Album ;(
-        </a>
+      <a href="https://dustyest.github.io/photography.html" target="_blank" rel="noopener noreferrer" class="google-photos-link">
+        No Link for this Album ;(
+      </a>
 
-        <a
-          href="https://dustyest.github.io/photography.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="google-photos-link"
-          style="display: block; text-align: center; margin: 0px auto 10px;">
-          No Link for this Album ;(
-        </a>
+      <a href="https://dustyest.github.io/photography.html" target="_blank" rel="noopener noreferrer" class="google-photos-link">
+        No Link for this Album ;(
+      </a>
     </div>
 
-    <!-- Instagram embed script -->
-    <script async src="//www.instagram.com/embed.js"></script>
-
-    <!-- Google Photos Link -->
-    <a 
-      href="https://dustyest.github.io/photography.html"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="google-photos-link">
+    <a href="https://dustyest.github.io/photography.html" target="_blank" rel="noopener noreferrer" class="google-photos-link">
       Enter Footer Note HERE!
     </a>
   </main>
+
+  <!-- Instagram embed script -->
+  <script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
