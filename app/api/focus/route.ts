@@ -1,25 +1,25 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// Define exact modes
 type FocusMode = "Do Not Disturb" | "Sleep";
 
-// Simple in-memory state
 let focusStates: Record<FocusMode, boolean> = {
   "Do Not Disturb": false,
   Sleep: false,
 };
+
+function isFocusMode(value: any): value is FocusMode {
+  return value === "Do Not Disturb" || value === "Sleep";
+}
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const { mode, status } = body;
 
-    // Check if mode is one of the allowed focus modes
-    if (mode !== "Do Not Disturb" && mode !== "Sleep") {
+    if (!isFocusMode(mode)) {
       return NextResponse.json({ error: "Invalid mode" }, { status: 400 });
     }
 
-    // TypeScript now knows mode is a valid key
     focusStates[mode] = status === "on";
 
     return NextResponse.json({ success: true, state: focusStates });
