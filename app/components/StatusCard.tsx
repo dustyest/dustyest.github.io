@@ -22,15 +22,11 @@ type LanyardData = {
 export default function StatusCard() {
   const [data, setData] = useState<LanyardData | null>(null);
 
-  const userId = "358478174591385600"; // your Discord ID
-
   useEffect(() => {
     const fetchStatus = async () => {
       try {
-        const res = await axios.get(
-          `https://api.lanyard.rest/v1/users/${userId}`
-        );
-        setData(res.data.data);
+        const res = await axios.get("/api/discord"); // <-- your own API
+        setData(res.data);
       } catch (err) {
         console.error("Error fetching Discord status:", err);
       }
@@ -44,6 +40,7 @@ export default function StatusCard() {
   if (!data) return <p className="text-white">Loading status...</p>;
 
   const { discord_user, discord_status, activities } = data;
+  const userId = "358478174591385600";
   const avatarUrl = `https://cdn.discordapp.com/avatars/${userId}/${discord_user.avatar}.png`;
 
   const watching = activities.find((a) => a.name === "Crunchyroll");
@@ -85,23 +82,24 @@ export default function StatusCard() {
           />
         </div>
         <div>
-          <p className="text-l font-semibold">rashaan</p>
+          <p className="text-l font-semibold">{discord_user.username}</p>
           <p className="text-sm text-gray-400">{statusText[discord_status]}</p>
         </div>
       </div>
 
       {animeTitle && (
         <p className="mt-4 text-lg">
-          🍿 Watching <span className="font-semibold">{animeTitle}</span> on <span className="text-orange-500 font-semibold">Crunchyroll</span>
-        <p>
-          EP: {episodeInfo && <span className="text-gray-400">{episodeInfo}</span>}
-        </p> 
+          🍿 Watching <span className="font-semibold">{animeTitle}</span> on{" "}
+          <span className="text-orange-500 font-semibold">Crunchyroll</span>
+          <p>
+            EP: {episodeInfo && <span className="text-gray-400">{episodeInfo}</span>}
+          </p>
         </p>
       )}
 
       {gameName && (
         <p className="mt-2 text-lg">
-          🎮 Currently playing <span className="font-medium">{gameName}</span>
+          🎮 Currently playing <span className="text-blue-500 font-medium">{gameName}</span>
         </p>
       )}
     </div>
