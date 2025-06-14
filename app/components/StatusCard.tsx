@@ -67,7 +67,7 @@ export default function StatusCard() {
   };
 
   return (
-    <div className="bg-[#1c1c1e] p-6 rounded-2xl shadow-2xl w-full max-w-md text-white transition-all">
+    <div className="bg-[#1f1f21] p-6 rounded-2xl shadow-2xl w-full max-w-md text-white transition-all">
       <div className="flex items-center gap-4">
         <div className="relative">
           <img

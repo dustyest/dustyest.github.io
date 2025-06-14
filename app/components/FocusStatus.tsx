@@ -30,7 +30,7 @@ export default function FocusStatus() {
   if (!focus) return null;
 
   return (
-    <div className="mt-4 p-4 rounded-2xl bg-neutral-900 text-white shadow-lg transition-all duration-300 space-y-2">
+    <div className="mt-4 p-4 rounded-2xl bg-[#262629] text-white shadow-lg transition-all duration-300 space-y-2">
       {focus["Do Not Disturb"] && (
         <div className="flex items-center gap-2 text-purple-400 animate-fadeIn">
           <Moon className="w-5 h-5" />
