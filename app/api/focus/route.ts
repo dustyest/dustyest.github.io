@@ -1,3 +1,4 @@
+//1
 import { NextRequest, NextResponse } from "next/server";
 
 const FIREBASE_URL = process.env.FIREBASE_DB;
